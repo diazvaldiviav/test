@@ -36,13 +36,13 @@ export default function NavBarBotons() {
       <div className={active}>
         <ul className="botons-list">
           <li>
-            <a href="#">Who am I?</a>
+            <a href="##who-i-am">Who am I?</a>
           </li>
           <li>
-            <a href="#">My proyects</a>
+            <a href="#projects">My proyects</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#footer">Contact</a>
           </li>
         </ul>
       </div>

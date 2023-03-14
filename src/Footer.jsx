@@ -4,7 +4,7 @@ import "./CSS/file.css";
 
 export default function Footer() {
     return(
-        <footer className="container-footer">
+        <footer id="footer" className="container-footer">
             <div>
             <div className="item-footer">
                 <p><BotonEnlace name="&copy; Victor Diaz" enlace="#"></BotonEnlace></p>
