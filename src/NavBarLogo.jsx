@@ -6,7 +6,7 @@ export default function NavBarLogo() {
   return (
     <div className="container-nav">
       <nav className="Navbar">
-        <a href="#" className="d-flex p-4">
+        <a href="#" className="d-flex">
           <div className="container-logo">
           <div className="img-logo"></div>
           <span className="My-name-container">
