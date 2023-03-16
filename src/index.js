@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import NavBar from './NavBarLogo';
-import Header from './Header';
-import ProjectsSection from './ProjectsSection';
-import Footer from './Footer';
+import NavBar from './component/NavBarLogo';
+import Header from './component/Header';
+import ProjectsSection from './component/ProjectsSection';
+import Footer from './component/Footer';
+import Forms from './component/forms';
 import "./CSS/file.css";
 
 
@@ -14,6 +15,7 @@ root.render(
     <NavBar></NavBar>
     <Header></Header>
     <ProjectsSection></ProjectsSection>
+    <Forms></Forms>
     <Footer></Footer>
   </React.StrictMode>
 );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./CSS/file.css";
+import "../CSS/file.css";
 
 // const [active, setActive] = useState("nav__menu");
 //   const [icon, setIcon] = useState("nav__toggler");
@@ -36,7 +36,7 @@ export default function NavBarBotons() {
       <div className={active}>
         <ul className="botons-list">
           <li>
-            <a href="##who-i-am">Who am I?</a>
+            <a href="#main-container-about-id">Who am I?</a>
           </li>
           <li>
             <a href="#projects">My proyects</a>

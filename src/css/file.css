@@ -11,11 +11,13 @@
   --font-family-display: "Noe Display", Georgia, Times, serif;
 }
 
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
 a {
   text-decoration: none;
 }
-
-
 
 h1,
 h2,
@@ -32,6 +34,12 @@ html {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --font-family-display: Noe Display, Georgia, Times, serif;
+}
+
+button, input, select, textarea {
+  margin: 0;
+  line-height: inherit;
+  border-radius: 0;
 }
 
 body {
@@ -80,7 +88,7 @@ body {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-image: url("../logo.jpg");
+  background-image: url("../img/logo.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -130,7 +138,7 @@ body {
 }
 
 .Burger-boton {
-  background-image: url(../Burger.png);
+  background-image: url(../img/Burger.png);
   background-position: center;
   background-size: cover;
   width: 50px;
@@ -169,14 +177,14 @@ body {
 
 /* Proyects */
 
-.container-portfolio{
+.container-portfolio {
   width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.container-portfolio h1{
+.container-portfolio h1 {
   font-size: 3.5rem;
   line-height: 1;
   margin-bottom: 1.5rem;
@@ -186,7 +194,7 @@ body {
   margin-bottom: 10px;
 }
 
-.main-contain-portfolio{
+.main-contain-portfolio {
   margin-top: 20px;
   width: 100%;
   height: 300px;
@@ -222,7 +230,7 @@ body {
 .item-img-1 {
   width: 100%;
   height: 60%;
-  background-image: url(../GCS.png);
+  background-image: url(../img/GCS.png);
   background-position: center;
   background-size: cover;
   border-radius: 0.5rem;
@@ -231,7 +239,7 @@ body {
 .item-img-2 {
   width: 100%;
   height: 60%;
-  background-image: url(../inventory.png);
+  background-image: url(../img/inventory.png);
   background-position: center;
   background-size: cover;
   border-radius: 0.5rem;
@@ -240,7 +248,7 @@ body {
 .item-img-3 {
   width: 100%;
   height: 60%;
-  background-image: url(../batata.png);
+  background-image: url(../img/batata.png);
   background-position: center;
   background-size: cover;
   border-radius: 0.5rem;
@@ -260,14 +268,14 @@ body {
 }
 
 /* Footer */
-.container-footer{
+.container-footer {
   margin-top: 100px;
   width: 100%;
   height: 110px;
   background-color: var(--color-bg-offset);
 }
 
-.container-footer > div{
+.container-footer > div {
   display: flex;
   width: 100%;
   height: 100%;
@@ -278,47 +286,163 @@ body {
   align-items: center;
 }
 
-
-.item-footer{
+.item-footer {
   display: flex;
-  gap: 10px
-} 
+  gap: 10px;
+}
 
-
-.img-phone{
-  background-image: url(../phone-handset_icon-icons.com_48252.png);
+.img-phone {
+  background-image: url(../img/phone-handset_icon-icons.com_48252.png);
   background-position: center;
   background-size: cover;
   width: 30px;
   height: 30px;
 }
 
-.img-email{
-  background-image: url(../4202011emailgmaillogomailsocialsocialmedia-115677_115624.png);
+.img-email {
+  background-image: url(../img/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png);
   background-position: center;
   background-size: cover;
   width: 30px;
   height: 30px;
 }
 
-.img-git{
-  background-image: url(../github-logo_icon-icons.com_73546.png);
+.img-git {
+  background-image: url(../img/github-logo_icon-icons.com_73546.png);
   background-position: center;
   background-size: cover;
   width: 30px;
   height: 30px;
 }
 
+/* Section about */
+.signup__back, .signup__front {
+  padding: 2rem;
+  border-radius: .5rem;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-bg-offset);
+}
 
+.signup__title {
+  margin-bottom: 1rem;
+}
 
+.signup {
+  font-size: 1.125rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
 
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+    line-height: inherit;
+  margin: 0;
+}
+
+.text-tarea{
+  width: 100%;
+  height: 100px;
+}
+
+.form__fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1rem;
+  grid-column-gap: 2rem;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form__label {
+  display: block;
+  font-weight: 700;
+  font-size: .875rem;
+  margin-bottom: .25rem;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-text-offset);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: .5rem 1rem;
+  box-sizing: border-box;
+}
+
+.form--signup .form__actions {
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.form__actions {
+  margin: 1rem 0;
+  text-align: right;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  border-color: transparent;
+  color: #fff;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  text-shadow: 0 1px 3px rgba(0,0,0,.15);
+  transition: all .15s ease;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  transition: all .2s ease-in-out;
+  font-size: .875rem;
+  padding: .75rem 1.5rem;
+  border: 2px solid rgba(0,0,0,.2);
+    border-top-color: rgba(0, 0, 0, 0.2);
+    border-right-color: rgba(0, 0, 0, 0.2);
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    border-left-color: rgba(0, 0, 0, 0.2);
+  border-radius: .25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+}
+button, input, select, textarea {
+  margin: 0;
+    margin-right: 0px;
+  line-height: inherit;
+  border-radius: 0;
+}
+
+@media (min-width: 670px)
+{
+.form__fields {
+  grid-template-columns: repeat(2,1fr);
+}
+
+}
+
+/* End Section About */
 
 @media (max-width: 992px) {
   .container-botons {
     position: relative;
   }
   .Burger-boton {
-    background-image: url(../Burger.png);
+    background-image: url(../img/Burger.png);
     background-position: center;
     background-size: cover;
     width: 50px;
@@ -403,12 +527,11 @@ body {
     border-radius: 0.5rem;
   }
 
-  .container-portfolio h1{
+  .container-portfolio h1 {
     text-align: center;
   }
 
-  
-  .container-footer > div{
+  .container-footer > div {
     background-color: var(--color-bg-offset);
     padding: 1rem;
     width: 100%;

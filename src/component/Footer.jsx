@@ -1,5 +1,5 @@
 import BotonEnlace from "./BotonEnlace";
-import "./CSS/file.css";
+import "../CSS/file.css";
 
 
 export default function Footer() {

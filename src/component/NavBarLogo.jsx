@@ -1,5 +1,5 @@
 import NavBarBotons from "./NavBarBotons";
-import "./CSS/file.css";
+import "../CSS/file.css";
 
 
 export default function NavBarLogo() {
