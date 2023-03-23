@@ -1,55 +1,122 @@
+import React, { useState , useEffect} from "react";
 import "../CSS/file.css";
+import axios from "axios";
+
+const API = "https://localhost:7122/api/GeneralInfo";
+
+
+  
+  
+
 
 export default function Forms() {
+const [name, setName] = useState('');
+const [email, setEmail] = useState('');
+const [message, setMessage] = useState('');
+
+
+
+const Info = {
+  name,
+  email,
+  message
+}
+
+const onInputNameChange = (event) =>{
+  setName(event.target.value)
+  Info.name = setName(event.target.value)
+}
+
+const onInputEmailChange = (event) =>{
+  setEmail(event.target.value)
+  Info.email = setEmail(event.target.value)
+}
+
+const onInputMessageChange = (event) =>{
+  setMessage(event.target.value)
+  Info.message = setMessage(event.target.value)
+}
+
+//  function Test() {
+//    const [info, setInfo] = useState([])
+   
+//    useEffect(() => {
+//      axios
+//        .get(`https://localhost:7122/api/generalinfo/`)
+//        .then(res => setInfo(res.data))
+//    }, [])
+ 
+   
+//   //  info.map(item => console.log(item.firstName))
+//   return info
+//  }
+
+// //https://pokeapi.co/api/v2/pokemon/ditto
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  enviarSolicitud(Info);
+};
+
+const enviarSolicitud = async(Info) => {
+  await axios ({
+    method: 'POST', 
+    url:`https://localhost:7122/api/generalinfo/`, 
+    data: {
+      "firstName": Info.name,
+      "email": Info.email,
+      "message": Info.message
+    }}).then(response => console.log(response))
+}
+
+
+
+
+
+
   return (
 <aside className="signup js-signup-widget">
 <div class="signup__front">
-      <h2 class="signup__title">Send me a message</h2>
-      <div class="signup__desc">
+      <h2 className="signup__title">Send me a message</h2>
+      <div className="signup__desc">
        If you'd like to know more about me send me a message
       </div>
-      <div class="signup__form">
-        <form
-          action="#"
-          method="POST"
-          className="form form--signup"
-        >
-          <div class="form__body">
+      <div className="signup__form">
+        <form onSubmit={handleSubmit} className="form form--signup">
+          <div className="form__body">
             <input type="hidden" name="u" value="64781452976687d0f4f2ea370" />
             <input type="hidden" name="id" value="772b9208b5" />
             <input type="hidden" name="SOURCE" value="/mailinglist/" />
             <div className="form__fields">
               <p className="form__field">
-                <label for="mce-FNAME" class="form__label"
+                <label htmlfor="mce-FNAME" class="form__label"
                   >First Name</label
                 >
                 <input
                   type="text"
                   className="form__input"
-                  value=""
-                  name="FNAME"
-                  id="mce-FNAME"
                   placeholder="Bob"
+                  value = {name}
+                  onChange={onInputNameChange}
                 />
               </p>
               <p className="form__field">
-                <label for="mce-EMAIL" className="form__label">Email Address</label>
+                <label htmlfor="mce-EMAIL" className="form__label">Email Address</label>
                 <input
                   type="email"
-                  class="form__input"
-                  value=""
+                  className="form__input"
                   name="EMAIL"
-                  id="mce-EMAIL"
                   placeholder="bob@gmail.com"
-                  required=""
+                  value={email}
+                  onChange={onInputEmailChange}
                 />
               </p>
             </div>
-            <div class="sr-only" aria-hidden="true">
-              <textarea className="text-tarea"></textarea>
+            <div className="sr-only" aria-hidden="true">
+              <textarea onChange={onInputMessageChange} value={message} className="text-tarea"></textarea>
             </div>
           </div>
-          <div class="form__actions">
+          <div className="form__actions">
             <button type="submit" class="btn btn--primary" name="enviar">
               Enviar
             </button>
@@ -109,7 +176,13 @@ export default function Forms() {
         </form>
       </div>
     </div>
-  
+ 
+
+
+ <p>Nombre: {name}</p>
+ <p>Email: {email}</p>
+ <p>Message: {message}</p>
 </aside>
   );
 }
+
